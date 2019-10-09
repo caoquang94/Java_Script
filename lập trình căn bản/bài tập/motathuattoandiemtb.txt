@@ -1,0 +1,16 @@
+b1:
+Begin
+    Input C
+    F = (9*C)/5 + 32
+    Display F
+End
+
+b2: 
+Begin
+  N là số được sinh số ngẫu nhiên trong khoảng 0-9
+  Nhập vào M
+  IF (N==M)
+    Display "Dự đoán đúng"         
+  ELSE             
+    Display "Dự đoán sai" 
+End
