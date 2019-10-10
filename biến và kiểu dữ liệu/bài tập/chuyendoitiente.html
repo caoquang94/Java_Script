@@ -35,7 +35,7 @@
             let x1 = document.getElementById('input').value;
             let x = parseFloat(x1);
             if (currencyFrom.value == 'USD' && currencyTo.value == 'VND') {
-                document.getElementById('ketqua').innerHTML=(x*23000)+'VND';
+                document.getElementById('ketqua').inputMode=(x*23000)+'VND';
             }
             if(currencyFrom.value=='USD' && currencyTo.value=='USD'){
                 document.getElementById('ketqua').innerHTML= x+'USD';

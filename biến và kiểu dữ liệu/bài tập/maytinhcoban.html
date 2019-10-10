@@ -30,32 +30,36 @@
         let b1=document.getElementById('input2').value;
         let a=parseFloat(a1);
         let b=parseFloat(b1);
-        let x = parseFloat(a+b).toFixed(2);
-        alert('x = ' +x );
+        let result = parseFloat(a+b).toFixed(2);
+        alert('Result: ' +result );
     }
     function sub(){
         let a1=document.getElementById('input1').value;
         let b1=document.getElementById('input2').value;
         let a=parseFloat(a1);
         let b=parseFloat(b1);
-        let x = parseFloat(a-b).toFixed(2);
-        alert('x = ' +x );
+        let result = parseFloat(a-b).toFixed(2);
+        alert('Result: ' +result );
     }
     function mul(){
         let a1=document.getElementById('input1').value;
         let b1=document.getElementById('input2').value;
         let a=parseFloat(a1);
         let b=parseFloat(b1);
-        let x = parseFloat(a*b).toFixed(2);
-        alert('x = ' +x );
+        let result = parseFloat(a*b).toFixed(2);
+        alert('Result: ' +result );
     }
     function div(){
         let a1=document.getElementById('input1').value;
         let b1=document.getElementById('input2').value;
         let a=parseFloat(a1);
         let b=parseFloat(b1);
-        let x = parseFloat(a/b).toFixed(2);
-        alert('x = ' +x );
+        let result = parseFloat(a/b).toFixed(2); zn
+        if (b==0)
+        {alert ('không chia được cho 0')
+        alert ('yêu cầu nhập lại')}
+        else {
+        alert('Result: ' +result )};
     }
         
 
