@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Amount</td>
+            <td>From Currency</td>
+            <td>To Currency</td>
+        </tr>   
+        <tr>
+            <td><input id='input' type=""></td>
+
+            <td> <select id="currencyFrom">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select></td>
+            <td> <select id="currencyTo">
+                    <option value='USD'>USD</option>
+                    <option value="VND">VND</option>
+                </select></td>
+        </tr>
+    </table>
+    
+    <h2><div id='ketqua'></div>
+    <button onclick="chuyen()">Convert</button></h2>
+    
+    <script>
+        function chuyen() {
+            let x1 = document.getElementById('input').value;
+            let x = parseFloat(x1);
+            if (currencyFrom.value == 'USD' && currencyTo.value == 'VND') {
+                document.getElementById('ketqua').innerHTML=(x*23000)+'VND';
+            }
+            if(currencyFrom.value=='USD' && currencyTo.value=='USD'){
+                document.getElementById('ketqua').innerHTML= x+'USD';
+            }
+            if(currencyFrom.value=='VND' && currencyTo.value=='VND'){
+                document.getElementById('ketqua').innerHTML= x+'VND';
+            }
+            if(currencyFrom.value=='VND' && currencyTo.value=='USD'){
+                document.getElementById('ketqua').innerHTML= parseFloat((x/23000)).toFixed(3) +'USD' ;
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
