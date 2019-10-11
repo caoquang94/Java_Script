@@ -6,39 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-   
-    <style>
-        #a{
-            margin-left:200px;
-        }
-    </style>
-   
+    <form>
+            First name:<br>
+            <input type="text" id="firstname" value="">
+            <br>
+            Last name:<br>
+            <input type="text" id="lastname" value="">
+            <br>
+            <button value="summit" type="button" onclick = ten(this.value)></button>
+          </form>
 </head>
 
 <body>
-<hr>
-<h1 id='a'>So Sánh</h1>
-<table>
-
-    <tr>
-        <td>nhập a:<input id=ip1 type="number"></input></td>
-        <td>nhập b:<input id=ip2 type="number"></input></td>
-        <td>nhập c:<input id=ip3 type="number"></input></td>
-    </tr>
-
-</table>
-<h2><button onclick=SoSanh()>So Sánh </button></h2>
-<div id="ketqua"></div>
-<script>
-    function SoSanh() {
-        let a = +document.getElementById('ip1').value;
-        let b = +document.getElementById('ip2').value;
-        let c = +document.getElementById('ip3').value;
-        (a > b && a > c) ? document.getElementById('ketqua').innerHTML = ('a max') : (b > c) ? document.getElementById('ketqua').innerHTML = ('b max') : document.getElementById('ketqua').innerHTML = ('c max');
-
-    }
-
-</script>
+    <script>
+        function ten(t){
+        if (t ==="summit"){
+        let a = document.getElementById='firstname'.value;
+        let b = document.getElementById='lastname'.value;
+        let c = a+b;
+        alert ('Full Name Is ' +c)}}
+    </script>
 </body>
 
 </html>

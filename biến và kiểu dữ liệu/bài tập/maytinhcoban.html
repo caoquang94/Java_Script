@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,17 +16,20 @@
             <h1 style=text-align:center>Caculator</h1>
         </tr>
         <tr>
-            <td><input id='input1' type=""></td>
-            <td><input id='input2' type=""></td>
+            <td>Nhập số:<br>
+            <input id='input1' type=""></td>
+            <td>Nhập số:<br>
+            <input id='input2' type=""></td>
         </tr>
         <tr>
             <td>
-                <button value="Add" onclick=TinhToan()> addition(+)</button>
-                <button value="Sub" onclick=TinhToan()> subtration(-)</button>
+                <button value="Add" onclick=TinhToan(this.value)> addition(+)</button>
+                <button value="Sub" onclick=TinhToan(this.value)> subtration(-)</button>
             </td>
             <td>
-                <button value="Mul" onclick=TinhToan()> multiplication(x)</button>
-                <button value="Div" onclick=TinhToan()> division(/)</button>
+                <button value="Mul" onclick=TinhToan(this.value)> multiplication(x)</button>
+                <button value="Div" onclick=TinhToan(this.value)> division(/)</button>
+            </td>
         </tr>
     </table>
     <script>
@@ -35,6 +38,7 @@
             let b1 = document.getElementById('input2').value;
             let a = parseFloat(a1);
             let b = parseFloat(b1);
+            
             if (tt === 'Add') {
                 let result = parseFloat(a + b).toFixed(3);
                 alert('Result: ' + result);
