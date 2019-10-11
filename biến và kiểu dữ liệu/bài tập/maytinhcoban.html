@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,52 +8,62 @@
     <title>Document</title>
 
 </head>
+
 <body>
     <table>
-    <tr><h1>Caculator</h1>
-    </tr>
-    <tr>
-    <td><input id='input1' type =""></td>
-    <td><input id='input2' type =""></td>
-    </tr>
-    <tr>
-    <td>
-    <button  value="Add" onclick= TinhToan()> addition(+)</button>
-    <button  value="Sub" onclick= TinhToan()> subtration(-)</button>
-    </td>
-    <td>
-    <button  value="Mul" onclick= TinhToan()> multiplication(x)</button>
-    <button  value="Div" onclick= TinhToan()> division(/)</button>
-    </tr>
+        <hr>
+        <tr>
+            <h1 style=text-align:center>Caculator</h1>
+        </tr>
+        <tr>
+            <td><input id='input1' type=""></td>
+            <td><input id='input2' type=""></td>
+        </tr>
+        <tr>
+            <td>
+                <button value="Add" onclick=TinhToan()> addition(+)</button>
+                <button value="Sub" onclick=TinhToan()> subtration(-)</button>
+            </td>
+            <td>
+                <button value="Mul" onclick=TinhToan()> multiplication(x)</button>
+                <button value="Div" onclick=TinhToan()> division(/)</button>
+        </tr>
     </table>
     <script>
-    function TinhToan(tt){
-        let a1 = document.getElementById('input1').value;
-        let b1 = document.getElementById('input2').value;
-        let a = parseFloat(a1);
-        let b = parseFloat(b1);
-        if (tt==='Add')
-        {let result = parseFloat(a+b).toFixed(3);
-        alert('Result: ' +result );}
-    
-        if(tt==='Sub')
-        {let result = parseFloat(a-b).toFixed(3);
-        alert('Result: ' +result );}
-    
-        if (tt==='Mul')
-        {let result = parseFloat(a*b).toFixed(3);
-        alert('Result: ' +result);}
+        function TinhToan(tt) {
+            let a1 = document.getElementById('input1').value;
+            let b1 = document.getElementById('input2').value;
+            let a = parseFloat(a1);
+            let b = parseFloat(b1);
+            if (tt === 'Add') {
+                let result = parseFloat(a + b).toFixed(3);
+                alert('Result: ' + result);
+            }
 
-        if (tt==='Div')
-        {let result = parseFloat(a/b).toFixed(2);
-        if (b==0)
-        {alert ('không chia được cho 0')
-        alert ('yêu cầu nhập lại')}
-        else {
-        alert('Result: ' +result )};
-    }}
-        
+            if (tt === 'Sub') {
+                let result = parseFloat(a - b).toFixed(3);
+                alert('Result: ' + result);
+            }
+
+            if (tt === 'Mul') {
+                let result = parseFloat(a * b).toFixed(3);
+                alert('Result: ' + result);
+            }
+
+            if (tt === 'Div') {
+                let result = parseFloat(a / b).toFixed(2);
+                if (b == 0) {
+                    alert('không chia được cho 0')
+                    alert('yêu cầu nhập lại')
+                }
+                else {
+                    alert('Result: ' + result)
+                };
+            }
+        }
+
 
     </script>
 </body>
+
 </html>

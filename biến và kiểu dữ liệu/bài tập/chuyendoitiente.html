@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+    #a{text-align: center}
+    </style>
 </head>
+
 <body>
+     <h1 id='a'>Chuyển Đổi Tiền Tệ</h1>
+    <hr>
     <table>
         <tr>
             <td>Amount</td>
             <td>From Currency</td>
             <td>To Currency</td>
-        </tr>   
+        </tr>
         <tr>
             <td><input id='input' type=""></td>
 
@@ -26,25 +33,27 @@
                 </select></td>
         </tr>
     </table>
-    
-    <h2><div id='ketqua'></div>
-    <button onclick="chuyen()">Convert</button></h2>
-    
+
+    <h2>
+        <div id='ketqua'></div>
+        <button onclick="chuyen()">Convert</button>
+    </h2>
+
     <script>
         function chuyen() {
             let x1 = document.getElementById('input').value;
             let x = parseFloat(x1);
             if (currencyFrom.value == 'USD' && currencyTo.value == 'VND') {
-                document.getElementById('ketqua').inputMode=(x*23000)+'VND';
+                document.getElementById('ketqua').innerHTML = (x * 23000) + 'VND';
             }
-            if(currencyFrom.value=='USD' && currencyTo.value=='USD'){
-                document.getElementById('ketqua').innerHTML= x+'USD';
+            if (currencyFrom.value == 'USD' && currencyTo.value == 'USD') {
+                document.getElementById('ketqua').innerHTML = x + 'USD';
             }
-            if(currencyFrom.value=='VND' && currencyTo.value=='VND'){
-                document.getElementById('ketqua').innerHTML= x+'VND';
+            if (currencyFrom.value == 'VND' && currencyTo.value == 'VND') {
+                document.getElementById('ketqua').innerHTML = x + 'VND';
             }
-            if(currencyFrom.value=='VND' && currencyTo.value=='USD'){
-                document.getElementById('ketqua').innerHTML= parseFloat((x/23000)).toFixed(3) +'USD' ;
+            if (currencyFrom.value == 'VND' && currencyTo.value == 'USD') {
+                document.getElementById('ketqua').innerHTML = parseFloat((x / 23000)).toFixed(3) + 'USD';
             }
         }
 
@@ -52,4 +61,5 @@
 
     </script>
 </body>
+
 </html>

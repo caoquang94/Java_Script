@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+    <style>
+        #a{
+            margin-left:200px;
+        }
+    </style>
+   
+</head>
+
+<body>
+<hr>
+<h1 id='a'>So Sánh</h1>
+<table>
+
+    <tr>
+        <td>nhập a:<input id=ip1 type="number"></input></td>
+        <td>nhập b:<input id=ip2 type="number"></input></td>
+        <td>nhập c:<input id=ip3 type="number"></input></td>
+    </tr>
+
+</table>
+<h2><button onclick=SoSanh()>So Sánh </button></h2>
+<div id="ketqua"></div>
+<script>
+    function SoSanh() {
+        let a = +document.getElementById('ip1').value;
+        let b = +document.getElementById('ip2').value;
+        let c = +document.getElementById('ip3').value;
+        (a > b && a > c) ? document.getElementById('ketqua').innerHTML = ('a max') : (b > c) ? document.getElementById('ketqua').innerHTML = ('b max') : document.getElementById('ketqua').innerHTML = ('c max');
+
+    }
+
+</script>
+</body>
+
+</html>
