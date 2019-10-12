@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <hr>
+    <style>
+        #a {
+            text-align: center
+        }
+
+        ;
+    </style>
+</head>
+
+<body>
+    <h1 id='a'>Tìm Năm Nhuận</h1>
+    <table>
+        Nhập Năm:</br>
+        <input name="nam" type="text" /><br>
+        <button value="year" onclick=ketqua() type="summit">kết quả</button></table>
+    <script>
+        
+        function ketqua() {
+            let year = value = "year";
+            if (year % 4 == 0) {
+                if (year % 100 == 0) {
+                    if (year % 400 == 0) {
+                        alert(year + " is a leap year");
+                    } else {
+                        alert(year + " is NOT a leap year");
+                    }
+                } else {
+                    alert(year + " is a leap year");
+                }
+            } else {
+                alert(year + " is NOT a leap year");
+            }}
+
+    </script>
+</body>
+
+</html>
