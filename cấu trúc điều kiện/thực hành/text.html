@@ -20,24 +20,25 @@
     <h1 id='a'>Tìm Năm Nhuận</h1>
     <table>
         Nhập Năm:</br>
-        <input name="nam" type="text" /><br>
-        <button value="year" onclick=ketqua() type="summit">kết quả</button></table>
+        <input id="nam" type="text" /><br>
+        <button value = "year" onclick=ketqua(this.value) type="summit">kết quả</button></table>
     <script>
         
-        function ketqua() {
-            let year = value("year");
-            if (year % 4 == 0) {
-                if (year % 100 == 0) {
-                    if (year % 400 == 0) {
-                        alert(year + " is a leap year");
+        function ketqua(kq) {
+            
+            if (kq = parseInt(document.getElementById('nam').value))
+            if (kq % 4 == 0) {
+                if (kq % 100 == 0) {
+                    if (kq % 400 == 0) {
+                        alert(kq + " is a leap year");
                     } else {
-                        alert(year + " is NOT a leap year");
+                        alert(kq + " is NOT a leap year");
                     }
                 } else {
-                    alert(year + " is a leap year");
+                    alert(kq + " is a leap year");
                 }
             } else {
-                alert(year + " is NOT a leap year");
+                alert(kq + " is NOT a leap year");
             }}
 
     </script>
