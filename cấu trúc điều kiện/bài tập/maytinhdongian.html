@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <hr>
+    <style> #a{text-align: left;} 
+    
+   /* #table {background-color:#808080;
+            margin: auto} 
+            #result {
+                width: 96px;}</style> */
+    </style>
+</head>
+<body>
+    <p id = "a">Calculator</p>
+    <table>
+    <td colspan="5"><input id="result" type="text" /></td>
+    <tr>
+    <td><input type="button" value="1" name ="tt" onclick="result.value+=this.value"/>
+        <input type="button" value="2" name="tt" onclick="result.value+=this.value"/>
+        <input type="button" value="3" name="tt" onclick="result.value+=this.value"/>
+        <input type="button" value="+" name="tt" onclick="result.value+=this.value"/></td>
+    </tr>
+    <tr>
+            <td><input type="button" value="4" name="tt" onclick="result.value+=this.value"/>
+                <input type="button" value="5" name="tt" onclick="result.value+=this.value"/>
+                <input type="button" value="6" name="tt" onclick="result.value+=this.value"/>
+                <input type="button" value="-" name="tt" onclick="result.value+=this.value"/></td>
+            </tr>
+            <tr>
+                    <td><input type="button" value="7" name="tt" onclick="result.value+=this.value"/>
+                        <input type="button" value="8" name="tt" onclick="result.value+=this.value"/> 
+                        <input type="button" value="9" name="tt" onclick="result.value+=this.value"/>
+                        <input type="button" value="*" name="tt" onclick="result.value+=this.value"/></td>
+                    </tr>
+                    <tr>
+                            <td><input type="button" value="C" name="tt" onclick= "result.value=''"/>
+                                <input type="button" value="0" name="tt" onclick="result.value+=this.value"/>
+                                <input id="equ" type="button" value="=" name="tt" onclick="result.value=eval(result.value)"/>
+                                <input type="button" value="/" name="tt" onclick="result.value+=this.value"/></td>
+                            </tr>
+    </table>
+</body>
+</html>

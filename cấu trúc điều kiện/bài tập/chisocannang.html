@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body><table>
+    Nhập Chiều cao:<input id="height" type="text" /></br>
+    Nhập Cân Nặng:<input id="weight" type="text" />
+
+</table>
+<input type="button" value="BMI" onclick="status()" />
+<script>
+    function status() {
+        let a = parseFloat(document.getElementById("height").value);
+        let b = parseFloat(document.getElementById("weight").value);
+        let BMI = parseFloat(b / (a * a));
+        if (BMI < 18.5)
+            alert("Underweight");
+        else if (BMI < 25.0)
+            alert("Normal");
+        else if (BMI < 30.0)
+            alert("Overweight");
+        else
+            alert("Obese");
+    }
+
+
+</script>
+</body>
+</html>

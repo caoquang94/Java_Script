@@ -24,21 +24,21 @@
         <button value = "year" onclick=ketqua(this.value) type="summit">kết quả</button></table>
     <script>
         
-        function ketqua(kq) {
+        function ketqua(year) {
             
-            if (kq = parseInt(document.getElementById('nam').value))
-            if (kq % 4 == 0) {
-                if (kq % 100 == 0) {
-                    if (kq % 400 == 0) {
-                        alert(kq + " is a leap year");
+            if (year = parseInt(document.getElementById('nam').value))
+            if (year % 4 == 0) {
+                if (year % 100 == 0) {
+                    if (year % 400 == 0) {
+                        alert(year + " is a leap year");
                     } else {
-                        alert(kq + " is NOT a leap year");
+                        alert(year + " is NOT a leap year");
                     }
                 } else {
-                    alert(kq + " is a leap year");
+                    alert(year + " is a leap year");
                 }
             } else {
-                alert(kq + " is NOT a leap year");
+                alert(year + " is NOT a leap year");
             }}
 
     </script>
