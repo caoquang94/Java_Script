@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{padding-top:50px  ;}
+    #b{text-align: center;}
+    </style>
+</head>
+<body>
+    <div id = b>
+    <input type="text" id ="txtvalue"></input>
+    <input type="button" id ="txtAdd" value ="Add" onclick= add_array();></input>
+    <input type= "button" id = "txtDisplay" value = "Display" onclick = display_array();></input>
+    <div id = "result" ></div>
+    </div>
+<script>
+let x=0;
+let array = Array();
+function add_array(){
+array[x] = document.getElementById("txtvalue").value;
+alert("Element:" + array[x] + "Added at index " + x );
+x++;
+document.getElementById("txtvalue").value="";
+}
+function display_array(){
+let e = <hr/>;
+for(let i=0; i < array.lenght;i++){
+    e += "Element " + i + "= " + array[i] + "</br>"
+    document.getElementById("result").innerHTML= e;
+}
+}
+</script>
+</body>
+
+</html>

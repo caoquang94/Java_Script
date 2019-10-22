@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Do you love me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #NoAnswer {
+            transition: all 0.1s ease-in;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            }
+        #a{text-align: center;}
+
+        #container{
+            margin-top: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id = a >Yêu anh không? Nói</h1>
+    <div id ='container'>
+    <button onclick="alert('Anh cũng yêu Em!')">Yes</button>&nbsp;
+    &nbsp;
+    &nbsp;
+    <button onmouseover="changePosition(this)" id="NoAnswer">No</button>
+</div>
+    <script>
+        function changePosition(ThisButton) {
+            ScreenWidth = 600;
+            ScreenHeight = 500;
+            x = Math.floor(Math.random()*ScreenWidth);
+            y = Math.floor(Math.random()*ScreenHeight);
+            ThisButton.style.left = x+"px";
+            ThisButton.style.top = y+"px";
+            console.log(ScreenWidth);
+        }
+
+        
+    </script>
+</body>
+</html> 
