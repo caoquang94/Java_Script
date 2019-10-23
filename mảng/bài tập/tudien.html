@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <table>
+                <td><input type="text" id="input">
+                    <input type="button" value="summit" onclick="trans()">
+                </td>
+                <tr>
+                    <td>
+                        <select id="index1">
+                            <option value="ENG">ENG</option>
+                            <option value="VIE">VIE</option>
+                        </select>
+                    </td>
+                    <td> <select id="index2">
+                            <option value="ENG">ENG</option>
+                            <option value="VIE">VIE</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <div id="result">RESULT: </div>
+            <script>
+                function trans() {
+                    let x = document.getElementById('input').value;
+                    let EN = ["school", "money", "dog"];
+                    let VI = ["trường học", "tiền", "con chó"];
+                    if (index1.value == "ENG" && index2.value == "VIE") {
+                        for (let i = 0; i < EN.length; i++) {
+                            if (x == EN[i]) {
+                                document.getElementById('result').innerHTML = VI[i]
+                            }
+                        }
+                    }
+                    if (index2.value == "VIE" && index1.value == "ENG") {
+                        for (let i = 0; i < VI.length; i++) {
+                            if (x == VI[i]) {
+                                document.getElementById('result').innerHTML = EN[i];
+                            }
+                        }
+                    }
+                }
+            </script>
+</body>
+</html>

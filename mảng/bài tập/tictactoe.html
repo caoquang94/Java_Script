@@ -9,17 +9,17 @@
 </head>
 
 <body>
-    <h3>Caro Game Simple</h3>
-    <p id="carogame" ></p>
+    <h3>Tic Tac Toe</h3>
+    <p id="tictactoe"></p>
     <input type="button" value="Change Value 1" onclick="changeValue1()"></input></br></br>
     <input type="button" value="Change Value 2" onclick="changeValue2()"></input>
     <script>
-        let b = document.getElementById("carogame");
+        let b = document.getElementById("tictactoe");
 
         let board = [];
         let data = "";
         for (let i = 0; i < 9; i++) {
-            board[i] = ["o", "o", "o", "o", "o", "o", "o", "o", "o"];
+            board[i] = [".", ".", ".", ".", ".", ".", ".", ".", "."];
         }
 
         for (let i = 0; i < 9; i++) {
@@ -29,7 +29,7 @@
             }
         }
 
-         //data += "<br/><br/><input type='button' value='Change Value 1' onclick='changeValue()'>"
+
         b.innerHTML = data;
         function changeValue1() {
             let positionX = prompt("X: ");
@@ -39,10 +39,10 @@
             for (let i = 0; i < 9; i++) {
                 data += "<br/>";
                 for (let j = 0; j < 9; j++) {
-                    data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                    data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
                 }
             }
-            // data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+
             b.innerHTML = "<hr/>" + data;
         }
         function changeValue2() {
@@ -53,10 +53,10 @@
             for (let i = 0; i < 9; i++) {
                 data += "<br/>";
                 for (let j = 0; j < 9; j++) {
-                    data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                    data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
                 }
             }
-            // data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+
             b.innerHTML = "<hr/>" + data;
         }
     </script>
