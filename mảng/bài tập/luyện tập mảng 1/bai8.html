@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type = "text" value = "" id ="Arr">
+    <input type = "button" value = "See" onclick="SS()">
+    <div id = "kq"></div>
+    <script>
+    let x = [];
+    for (i = 0; i < x.length; i++){
+        x[i] = document.getElementById("Arr")
+    } -->
+    <script>
+    let x = [];
+    for (i = 0; i < 6; i++){
+        x[i] = Math.floor(Math.random()*100);
+    }
+    document.write("Mang so nguyen duoc tao la : " + x + "<br>")
+    document.write("Mang so nguyen duoc giam la : " + x.sort(function(a,b){return(b-a)}));
+    </script>
+    <!-- </script> -->
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type = "text" value = "" id = "ip">
+    <input type = "button" value = "input" onclick = "take()">
+    <input type = "button" value = "Reverse" onclick = "rev()">
+    <div id = "kq"></div>
+    <script>
+    z=0
+    x=[]
+    function take(){
+         x[z] = document.getElementById("ip").value;
+         alert('index '+z+" da duoc them vao")
+            z++
+            document.getElementById('ip').value=""
+    }
+    function rev(){
+    document.getElementById("kq").innerHTML = x.reverse();
+    }
+   
+
+    </script>
+</body>
+</html> 
