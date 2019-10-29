@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function min(a,b,c){
+            let min = a;
+            if(b<min){
+               min = b;
+            }
+            if(c<min){
+               min = c;
+            }
+            return min;
+        }
+        let number1 = parseInt(prompt("nhập số thứ nhất: "))
+        let number2 = parseInt(prompt("nhập số thứ hai: "))
+        let number3 = parseInt(prompt("nhập số thứ 3: "))
+        let d = min(number1,number2,number3);
+        alert(d);
+    </script>
+</body>
+</html>

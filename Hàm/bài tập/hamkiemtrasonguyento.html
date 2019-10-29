@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id = 'demo'></div>
+    <script>
+        function kiem_tra_snt(n)
+        {
+            let flag = true;
+            if (n < 2){
+                flag = false;
+            }
+            else{
+                for (let i = 2; i < n-1; i++)
+                {
+                    if (n % i == 0){
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            if (flag == true){
+                document.write(n + " là số nguyên tố <br/>");
+            }
+            else{
+                document.write(n + " không phải là số nguyên tố <br/>");
+            }
+        }
+        for(let i=0;i<=35;i++){
+            kiem_tra_snt(i);
+        }
+       
+    </script>
+</body>
+</html>

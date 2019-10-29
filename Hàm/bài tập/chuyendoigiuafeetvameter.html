@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        feet: <input type="text" name="firstname" id="a"/> 
+        đơn vị:
+        <select>
+            <option value="meters">meters</option>
+            <option value="feets">feets</option>
+        </select> 
+            <button type="button" onclick="chuyen()">Convert</button>      
+        <script>
+            function chuyen(){
+                let b = document.getElementById('a').value
+                let result = 3.279 * b ;
+                alert(result);
+            }  
+        </script>           
+</body>
+</html>

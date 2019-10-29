@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body> <p id="demo"></p>
+    <script>
+        let array =["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function chuyen(name){
+            for(i in array){
+                if(name==array[i]){
+                    alert(array2[i]);
+                }
+            }
+        }
+        let name2=prompt("nhập tên ngôi sao:");
+        let name3=chuyen(name2);
+        document.getElementById("demo").innerHTML=name3;
+    </script>
+    
+</body>
+</html>
