@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let Circle = function(radius, color){
+        this.radius = radius;
+        this.color = color;
+        this.getRadius = function(){
+            return this.radius;
+        }
+        this.getColor = function(){
+            return this.color;
+        }
+        this.getAera = function(){
+            return Math.PI * radius * radius;
+        }
+    }
+  
+    let radius = parseInt(prompt("Nhập bán kính : "));
+    let color = prompt("Chọn màu : " );
+    let circle = new Circle(radius, color);
+    let area = circle.getAera();
+    alert("Hình tròn màu " + color + " có diện tích là : " + area );
+    </script>
+</body>
+</html>

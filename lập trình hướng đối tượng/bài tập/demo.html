@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+Trình duyệt của bạn không hỗ trợ thẻ canvas trong HTML5.
+</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0,0,150,75);
+</script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // function food(n){
+    //            this.name = n;
+    //            this.decrease = function(v){
+    //                this.weight -= v;
+    //            }
+    //            this.status = function(){
+    //                return this.weight > 0;
+    //            }
+    //            this.setWeight = function(w){
+    //                this.weight = w;
+    //            }
+    //            this.getWeight = function(){
+    //                return this.weight;
+    //            }
+    //            this.validValue = function(v){
+    //                return v <= this.weight;
+    //            }
+    //        }
+    //        function person(n){
+    //            this.name = n;
+    //            this.increase = function(v){
+    //                this.weight += v;
+    //            }
+    //            this.setWeight = function(w){
+    //                this.weight = w;
+    //            }
+    //            this.getWeight = function(){
+    //                return this.weight;
+    //            }
+    //            this.eat = function(food, v){
+    //                if(v <= food.getWeight()){
+    //                    food.decrease(v);
+    //                    this.increase(v);
+    //                }
+    //            }
+    //        }
+    // mon1=new food("ech")
+    // mon2=new food("ga")
+    // quang=new person("quang")
+
+    var person1 = new Object({
+   name: 'Chris',
+   age: 38,
+   greeting: function() {
+     alert('Hi! I\'m ' + this.name + '.');
+   }
+ });
+ var person2 = Object.create(person1);
+ person2.name
+ person2.greeting()
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+    <div id = "KQ1"></div>
+    <div id = "KQ2"></div>    
+    <canvas id="myCanvas" width="1300px" height="600px" style="border:1px solid #d3d3d3;">
+    <script>
+    let Square = function (x,y,cd, cr) {
+                this.x =x;
+                this.y =y;
+                this.cd = cd;
+                this.cr = cr;
+                this.getCd = function(){
+                    return cd;
+                }
+                this.getCr = function(){
+                    return cr;
+                }
+                this.getArea = function(){
+                    return cd * cr;
+                }
+                this.getPerimeter = function(){
+                    return ((cd + cr)*2);
+                }
+    }
+            let Cd = parseInt(prompt("Nhập Chiều Dài :"));
+            let Cr = parseInt(prompt("Nhập Chiều Rộng : "));
+            let square = new Square(0, 0, Cd, Cr);
+            let cd = square.getCd();
+            let cr = square.getCr();
+            let area = square.getArea();
+            let per = square.getPerimeter();
+            document.getElementById("KQ1").innerHTML = "Diện tích là : " + area + "</br>"
+            document.getElementById("KQ2").innerHTML = "Chu vi là : " + per  
+
+            function getRandomHex(){
+                return Math.floor(Math.random()*255);
+            }
+
+            function getRandomColor(){
+               let red = getRandomHex();
+               let green = getRandomHex();
+               let blue = getRandomHex();
+            	 return "rgb(" + red + "," + blue + "," + green +")";
+            }
+            function createSquare() {
+                let ctx = document.getElementById("myCanvas").getContext("2d");
+                let x = Math.random() * window.innerWidth;
+                let y = Math.random() * window.innerHeight;
+                let color = getRandomColor();
+                let square = new Square(x, y, cd, cr);
+                ctx.fillStyle = color;
+                ctx.fillRect(square.x, square.y, square.cd, square.cr, 0, 0, Math.cd * Math.cr);
+                
+            }
+            
+            // function createMultipleSquare(){
+            //     for (var i = 0; i < 5; i++) {
+            //         createSquare();
+            //     }
+            // }
+
+            // createMultipleSquare();
+            createSquare();
+    </script>
+</body>
+</html>
