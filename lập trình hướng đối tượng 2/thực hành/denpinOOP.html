@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        
+        <div><img id='image' src="bongtui.jpg"  style="width: 500px;height: 350px; "alt=""></div>
+        <div id ='result'></div>
+        <button onclick="flas.turnOn();">TurnOn</button>
+        <button onclick="flas.turnOff();">TurnOff</button>
+    <script>
+        class Battery{
+            constructor(_energy){
+                this.energy = _energy;
+            }
+        }
+
+        class FlashLamp{
+            constructor(_status,_pin){
+                this.pin=_pin;
+                this.status = _status;
+            }
+            turnOn(){
+                if(this.status==false){
+                this.status = true;
+                this.pin.energy --;
+                alert('đèn sáng');
+                document.getElementById('image').src="bongden.jpg";
+                document.getElementById('result').innerHTML= "Năng Lượng của pin là: " + this.pin.energy;
+                }else{
+                    alert('bật cái cmm')
+                }
+            }
+            turnOff(){
+                if(this.status == true){
+                this.status = false;
+                document.getElementById('image').src="bongtui.jpg";
+                alert('tắt đèn Ngô tất tố')
+                }else{
+                    alert('tự hiểu')
+                }
+            }
+        }
+
+        let pin = new Battery(10);
+        let flas = new FlashLamp(false,pin);
+        document.getElementById('result').innerHTML= "Năng Lượng của pin là: " + pin.energy;
+
+    </script>
+</body>
+</html>

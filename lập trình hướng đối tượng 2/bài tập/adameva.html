@@ -1,0 +1,54 @@
+<body></p>
+    <p id="weightconlai"></p>
+</tr>
+<tr>
+<input type="button"  onclick="adam.eat(apple)" value="adam eat">
+<input type="button"  onclick="eva.eat(apple)" value="eva eat">
+<input type="button" value="adam say" onclick="adam.say()">
+</tr>
+<div id="result1"></div>
+<div id="result2"></div>
+    <script>
+        function Apple(weight){
+            this.weight = weight
+            this.appleWeight = function(){
+                return this.weight;
+            }
+            this.decreaseApple = function (){
+                this.weight -= 1 
+                return this.weight;
+            }
+        };
+        function Human(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+            this.isMale = function(){
+                if(this.gender){
+                    return true
+                }else return false
+            }
+            this.checkApple = function(Apple){
+                return Apple.weight;
+            }
+            this.eat = function(Apple) {
+                if(Apple.weight>0){
+                Apple.decreaseApple()
+                this.weight += 1
+                document.getElementById('result1').innerHTML= (this.name+" an tao "+"<br>"+" trai tao con lai: "+Apple.weight)
+                document.getElementById('result2').innerHTML = (" adam can nang: " +this.weight)
+            }
+        }
+            this.say = function(){
+                document.getElementById('result1').innerHTML=" táo gì dở vậy"
+            }
+            this.getWeight = function(){
+                return this.weight 
+            }
+        }
+    adam=new Human("adam",true,50)
+    apple=new Apple(10)
+    eva=new Human("eva",false,40)
+    </script> 
+</body>
+</html>

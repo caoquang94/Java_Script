@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id ='result'></div>
+    <button onclick="flas.turnOn();">TurnOn</button>
+    <button onclick="flas.turnOff();">TurnOff</button>
+    <script>
+        function Pin(nangluong){
+            this.nangluong=nangluong;
+        }
+
+        function FlashLamp (pin,status) {
+            this.pin=pin;
+            this.status=status;
+
+            this.turnOn = function(){
+                if(this.status==false){
+                this.status = true;
+                this.pin.nangluong --;
+                alert('đèn sáng');
+                document.getElementById('result').innerHTML= "Năng Lượng của pin là: " + this.pin.nangluong;
+                }else{
+                    alert('bật cái cmm')
+                }
+            }
+            this.turnOff =function(){
+                if(this.status == true){
+                this.status = false;
+                alert('tắt đèn Ngô tất tố')
+                }else{
+                    alert('tự hiểu')
+                }
+            }
+        }
+        let pin = new Pin(10);
+        let flas = new FlashLamp(pin,false);
+        document.getElementById('result').innerHTML= "Năng Lượng của pin là: " + pin.nangluong;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div><img id='image' src="mattrangtoi.jpeg"  style="width: 500px;height: 350px; "alt=""></div>
+    <button onclick="switchtolamp.switchOn()">TurnOn</button>
+    <button onclick="switchtolamp.switchOff()">TurnOff</button>
+    <div id = "result"></div>
+    <!-- <input type ="button" onclick="switchbutton.switchOn()" value = "TurnOn">
+    <input type = "button" onclick="switchbutton.switchOff()" value="TurnOff">
+    <div id = "light"></div> -->
+    <script>
+        // function EletricLamp (status, power){
+        //     this.status = status;
+        //     this.turnOn = function(){
+        //         this.status = true;
+        //         this.power -=1
+        //     }
+        //     this.turnOff = function(){
+        //         this.status = false;
+        //     }
+        //     this.power = power;
+        // }
+        // function SwitchButton(status,lamp){
+        //     this.status=status
+        //     this.lamp=lamp
+        //     this.switchtolamp = function(lamp){
+        //         this.lamp=lamp
+        //     }
+        //     this.light = function(){
+        //         if(this.status){
+        //             this.switchOn;
+        //         }else{
+        //             this.switchOff;
+        //         }
+        //     }
+                
+            
+        //     this.switchOn = function(){
+        //         this.lamp.turnOn()
+        //         this.status=true
+        //         alert('da bat den len. Nang luong con lai la'+lamp.power)
+        //     }
+        //     this.switchOff = function(){
+        //         this.lamp.turnOff()
+        //         this.status=false
+        //         alert('tat den roi nang luon con lai la: '+lamp.power )
+        //     }
+        // }
+        //     let electricLamp = new EletricLamp(false,10);
+        //     let switchbutton = new SwitchButton(false,electricLamp)
+            class ElectricLamp {
+                constructor (_power){
+                this.power = _power;
+            }}
+            class SwitchButton {
+                constructor(_status, _lamp){
+                    this.status = _status;
+                    this.lamp = _lamp;
+                }
+            
+            switchOn(){
+                if(this.status ==false){
+                this.status = true;
+                this.lamp.power --;
+                alert("Lighting !")}
+                else{
+                alert("The Lamp is Lighting!");}
+                document.getElementById('image').src="mattrang.jpeg";
+                document.getElementById("result").innerHTML = "POWER is : " + this.lamp.power
+                
+            }
+            
+            switchOff(){
+                if(this.status == true){
+                this.status = false;
+                alert("Not Lighting !")}
+                else{
+                alert("The Lamp Is Turning OFF");
+                }
+                document.getElementById('image').src="mattrangtoi.jpeg";
+            }
+            }
+            let lamp = new ElectricLamp(10);
+            let switchtolamp = new SwitchButton(false, lamp)
+            document.getElementById("result").innerHTML = "POWER is : " + lamp.power;
+    </script>
+</body>
+</html>
