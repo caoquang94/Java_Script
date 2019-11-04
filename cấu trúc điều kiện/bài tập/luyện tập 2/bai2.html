@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Meter<input type = "number" id = "met">
+    <input type = "button" onclick="chuyen()" value="convert">
+    <div id = "result"></div>
+    <script>
+    let M = document.getElementById("met").value;
+    
+    function chuyen(){
+        let Ft = M * 3.2808;    
+    
+    document.getElementById("result").innerHTML = "Ft là  : " + Ft }
+    </script>
+</body>
+</html>

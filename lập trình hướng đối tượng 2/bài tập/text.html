@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class hinhhoc{
+        constructor(cd, cr, r){
+            this.cd = cd;
+            this.cr = cr;
+            this.r = r;
+            
+        }
+       dt(){
+           return "dt là"
+       }
+    }
+    class hinhcn extends hinhhoc{
+        constructor(cd, cr){
+        super(cd, cr)
+        return dt() + cd * cr;
+        
+    }}
+    // class hinhtron extends hinhhoc{
+    //     super(r, S, CV)
+    // }
+    </script>
+</body>
+</html>

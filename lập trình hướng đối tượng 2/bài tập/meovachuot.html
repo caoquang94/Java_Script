@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="cat.catchMouse()">Catch</button>
+    <script>
+        class Mouse{
+            constructor(_name, _weight, _speed, _status){
+                this.name = _name;
+                this.weight = _weight;
+                this.speed = _speed;
+                this.status = _status;
+                
+            }
+            mouseStatus(){
+                if(this.status){
+                    return true
+                }else{
+                    return false
+                }
+            }
+            // mouseSpeed(){
+            //     this.speed = Math.floor(Math.random()*50);
+            //     return this.speed;
+            // }
+        }
+        class Cat {
+            constructor(_name, _weight, _speed){
+            this.name = _name;
+            this.weight = _weight;
+            this.speed = _speed;
+        }
+        
+        catchMouse(){
+            if( mouse.status = true){
+              if (mouse.speed < this.speed){
+                this.weight += mouse.weight;
+                mouse.status = false;
+                alert("trong luong meo là : " + this.weight)
+            }else{alert("chuot chay nhanh qua :")}
+
+            }else {alert("chuột chết rồi :")}
+        }
+        }
+        let mouse = new Mouse("jerry", 2, Math.floor(Math.random() * 20), true);
+        let cat = new Cat("tom", 10, 10)
+    </script>
+</body>
+</html>

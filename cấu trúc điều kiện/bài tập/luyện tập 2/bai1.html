@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    doC<input type = "text" id = "doC">
+    <input type = "button" onclick="chuyen()" value="convert">
+    <div id = "result"></div>
+    <script>
+    let C = document.getElementById("doC").value;
+    let F = parseFloat(C * (9/5) + 32); 
+    function chuyen(){
+        
+    
+    document.getElementById("result").innerHTML = "Độ F là : " + F }
+    </script>
+</body>
+</html>
