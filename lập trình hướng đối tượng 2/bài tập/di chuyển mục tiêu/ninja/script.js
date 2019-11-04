@@ -1,5 +1,5 @@
 const GAMEBOARD_WIDTH = 1130;
-const GAMEBOARD_HEIGHT = 530;
+const GAMEBOARD_HEIGHT =529;
 
 const ORIENTATION_LEFT = "left";
 const ORIENTATION_RIGHT = "right";
@@ -9,10 +9,10 @@ const ORIENTATION_DOWN = "down";
 const NINJA_WIDTH = 59;
 const NINJA_HEIGHT = 86;
 
-const DEFAULT_NINJA_X_POSITION = Math.random() * window.innerWidth;
-const DEFAULT_NINJA_Y_POSITION = Math.random()* window.innerHeight;
+const DEFAULT_NINJA_X_POSITION = 100;
+const DEFAULT_NINJA_Y_POSITION = 100;
 const DEFAULT_NINJA_ORIENTATION = ORIENTATION_DOWN;
-const DEFAULT_NINJA_SPEED = 50;
+const DEFAULT_NINJA_SPEED = 20;
 
 function Ninja(){
     this.xPosition = DEFAULT_NINJA_X_POSITION;
@@ -26,13 +26,11 @@ function Ninja(){
     };
 
     this.buildImage();
-    
+
     this.move = function(){
         switch (this.orientation) {
             case ORIENTATION_DOWN:
-            
-                    this.yPosition += this.speed;
-                
+                this.yPosition += this.speed;
                 break;
             case ORIENTATION_UP:
                 this.yPosition -= this.speed;
@@ -66,7 +64,7 @@ function Ninja(){
         image.onload = function(){
             ctx.drawImage(image, xPosition, yPosition);
         };
-        image.src = './ninja/' + this.image;
+        image.src = './images/' + this.image;
     }
 }
 
@@ -76,7 +74,6 @@ function GameBoard() {
     this.start = function(){
         this.ctx = document.getElementById('gameCanvas').getContext('2d');
         this.ninja.show(this.ctx);
-
     };
 
     this.render = function(){

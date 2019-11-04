@@ -7,8 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="cat.catchMouse()">Catch</button>
+    <button onclick="batchuot()">Catch</button>
     <script>
+        arr=[]
         class Mouse{
             constructor(_name, _weight, _speed, _status){
                 this.name = _name;
@@ -36,19 +37,30 @@
             this.speed = _speed;
         }
         
-        catchMouse(){
-            if( mouse.status = true){
-              if (mouse.speed < this.speed){
+        catchMouse(mouse){
+            if( mouse.status ){
+              if (this.speed > mouse.speed){
                 this.weight += mouse.weight;
-                mouse.status = false;
                 alert("trong luong meo là : " + this.weight)
+                mouse.status=false
             }else{alert("chuot chay nhanh qua :")}
 
             }else {alert("chuột chết rồi :")}
         }
         }
-        let mouse = new Mouse("jerry", 2, Math.floor(Math.random() * 20), true);
-        let cat = new Cat("tom", 10, 10)
+        for(i=1;i<11;i++){
+            arr[i]=new Mouse("jerry", 2, Math.floor(Math.random() * 50), true);
+        }
+        let cat = new Cat("tom", 10, 40)
+        function batnhieuchuot(){
+            for(i=0;i<arr.length;i++){
+                cat.catchMouse(arr[i])
+            }
+        }
+        function batchuot(){
+            let x = prompt("nhập vi tri con chuot muon an ");
+            cat.catchMouse(arr[x]);
+        }
     </script>
 </body>
 </html>
