@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <input type = "button" onclick="bacho()" value = "bã" >
     <button onclick="batchuot()">Catch</button>
     <script>
         arr=[]
@@ -36,7 +37,8 @@
             this.weight = _weight;
             this.speed = _speed;
         }
-        
+        canba(mouse,v){
+            mouse.speed-=v}
         catchMouse(mouse){
             if( mouse.status ){
               if (this.speed > mouse.speed){
@@ -51,7 +53,7 @@
         for(i=1;i<11;i++){
             arr[i]=new Mouse("jerry", 2, Math.floor(Math.random() * 50), true);
         }
-        let cat = new Cat("tom", 10, 40)
+        let cat = new Cat("tom", 10, 30)
         function batnhieuchuot(){
             for(i=0;i<arr.length;i++){
                 cat.catchMouse(arr[i])
@@ -60,6 +62,10 @@
         function batchuot(){
             let x = prompt("nhập vi tri con chuot muon an ");
             cat.catchMouse(arr[x]);
+        }
+        function bacho(){
+            x=prompt('cho chuot can ba')
+            cat.canba(arr[x],5)
         }
     </script>
 </body>

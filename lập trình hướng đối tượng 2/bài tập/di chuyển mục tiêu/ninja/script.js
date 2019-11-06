@@ -1,18 +1,18 @@
 const GAMEBOARD_WIDTH = 1130;
-const GAMEBOARD_HEIGHT =529;
+const GAMEBOARD_HEIGHT =600;
 
 const ORIENTATION_LEFT = "left";
 const ORIENTATION_RIGHT = "right";
 const ORIENTATION_UP = "up";
 const ORIENTATION_DOWN = "down";
 
-const NINJA_WIDTH = 59;
-const NINJA_HEIGHT = 86;
+const NINJA_WIDTH = 50;
+const NINJA_HEIGHT = 80;
 
 const DEFAULT_NINJA_X_POSITION = 100;
 const DEFAULT_NINJA_Y_POSITION = 100;
 const DEFAULT_NINJA_ORIENTATION = ORIENTATION_DOWN;
-const DEFAULT_NINJA_SPEED = 20;
+const DEFAULT_NINJA_SPEED = 50;
 
 function Ninja(){
     this.xPosition = DEFAULT_NINJA_X_POSITION;
@@ -27,29 +27,43 @@ function Ninja(){
 
     this.buildImage();
 
-    this.move = function(){
-        switch (this.orientation) {
-            case ORIENTATION_DOWN:
-                this.yPosition += this.speed;
-                break;
-            case ORIENTATION_UP:
-                this.yPosition -= this.speed;
-                break;
-            case ORIENTATION_LEFT:
-                this.xPosition -= this.speed;
-                break;
-            case ORIENTATION_RIGHT:
-                this.xPosition += this.speed;
-                break;
-        }
-
-        if(this.step === 2){
-            this.step = 1;
-        } else {
-            this.step = 2;
-        }
-        this.buildImage();
-    };
+    
+this.move = function(){
+       switch (this.orientation) {
+           case ORIENTATION_DOWN:
+               if(this.yPosition<500 ){
+                   this.yPosition += this.speed;
+                //    console.log("yPosition " + this.yPosition )
+                //    console.log("xPosition " + this.xPosition )
+               }
+               break;
+           case ORIENTATION_UP:
+               if(this.yPosition>0 ){
+                   this.yPosition -= this.speed;
+                //    console.log("yPosition " + this.yPosition )
+                //    console.log("xPosition " + this.xPosition )
+               }
+               break;
+           case ORIENTATION_LEFT:
+               if(this.xPosition >0){
+                   this.xPosition -= this.speed;
+                //    console.log("yPosition " + this.yPosition )
+                //    console.log("xPosition " + this.xPosition )
+               }
+               break;
+           case ORIENTATION_RIGHT:
+               if(this.xPosition <1030){
+                   this.xPosition += this.speed;
+                   break;
+               }
+       }
+       if(this.step === 2){
+           this.step = 1;
+       } else {
+           this.step = 2;
+       }
+       this.buildImage();
+   };
 
     this.turn = function(orientation){
         this.orientation = orientation;
@@ -64,7 +78,7 @@ function Ninja(){
         image.onload = function(){
             ctx.drawImage(image, xPosition, yPosition);
         };
-        image.src = './images/' + this.image;
+        image.src = './image/' + this.image;
     }
 }
 

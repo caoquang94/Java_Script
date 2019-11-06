@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // let x=[];
+    //     function check(x){
+    //          x = [];
+    // let n = prompt('nhap so luong mang')
+    //     for (i = 0; i < n; i++) {
+    //         x[i] = parseInt(prompt("Enter Numbers " + i));
+    //     }
+    //     let v = parseInt(prompt("Nhập vị trị cần xoá :"));
+    //     for (i = 0; i < n; i++) {
+
+    //         if (v === i ) {
+    //             x.splice(i, 1);
+    //         }
+    //     }
+    //     alert("Mảng sau khi xoá là " + "\n" + x)
+    // }
+    // check();
+    
+    let x = [];
+    function check(x){
+        x = [];
+    let n = prompt('nhap so luong mang')
+        for (i = 0; i < n; i++) {
+            x[i] = parseInt(prompt("Enter Numbers " + i));
+        }
+    let v = parseInt(prompt("Nhập vị trị cần thêm :"));
+        
+        for (i = 0; i < n; i++) {
+
+            if (v === i ) {
+                let t = prompt("Nhập số cần thêm : ")
+                x.splice(i,0,t);
+            }
+        }
+        document.write(x);}
+        check();
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let x= [];
+    let n = parseInt(prompt("Nhập số phần tử của mảng : "))
+    let max = 0
+    
+    for (i = 0; i < n; i++){
+        x[i] = parseInt(prompt("Enter Index " + i))
+        if (x[i] > max){
+        max = x[i]
+        
+        }
+    }alert(max + " là số lớn nhất " + "nằm tại ví trí số " +x.indexOf(max));   
+        
+
+    // let x= [];
+    // let n = parseInt(prompt("Nhập số phần tử của mảng : "))
+    // let max = 0;
+    // let sum = 0;
+    // for (i = 0; i < n; i++){
+    //     x[i] = parseInt(prompt("Enter Index " + i))
+    //     if (x[i] > max){
+    //     max = x[i]
+        
+    //     }
+    //      sum += x[i]
+    // }
+    // alert(max + " là số lớn nhất " + "nằm tại ví trí số " +x.indexOf(max)  + " \nTrung Bình là : " + +sum/n);
+    
+    </script>
+</body>
+</html>
