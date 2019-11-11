@@ -1,5 +1,6 @@
 let canvas = document.getElementById("game");
 let context = canvas.getContext('2d');
+    
 
 let ball = {
     x : 547,
@@ -9,7 +10,7 @@ let ball = {
     radius: 12,
 }
 let paddle = {
-    width: 1030,
+    width: 100,
     height: 10,
     x: 500,
     y: canvas.height - 10,
