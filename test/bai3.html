@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Số Hoàn Hảo</title>
+</head>
+
+<body>
+    <script>
+        function enterNumber() {
+            let n;
+            do {
+                n = prompt("Enter the number: ");
+            }
+            while (isNaN(n) || (parseInt(n) < n));
+            return n;
+        }
+        function isPerfectNumber(perfect) {
+            let sum = 0;
+            for (let i = 1; i < perfect / Math.sqrt(2); i++) {
+                if (perfect % i == 0) {
+                    sum += i;
+                }
+            }
+            result = (sum == perfect) ? true : false;
+            return (result);
+        }
+        function Find() {
+            let perfect = enterNumber();
+            result = isPerfectNumber(perfect);
+            result ? alert(perfect + " Is Perfect Number") : alert(perfect + " Is Not Perfect Number");
+        }
+        Find();
+    </script>
+</body>
+
+</html>

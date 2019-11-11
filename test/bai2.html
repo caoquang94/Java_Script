@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+</head>
+
+<body>
+    <script>
+
+        function letLength() {
+            do {
+                length = (prompt("Enter Number Of Array: "))
+            } while (
+                isNaN(length) || length < 0 || parseInt(length) != length
+            )
+            return length;
+        }
+
+        function tryAddFromArray() {
+            let index = parseInt(prompt("Enter Index You Want Change: "));
+
+            if (isNaN(index) || index < 0 || index > length - 1) {
+
+            }
+
+            return index;
+        }
+
+        function letArray(length) {
+            arr = [];
+            for (i = 0; i < length; i++) {
+                arr[i] = parseInt(prompt("Enter Index " + i));
+            }
+            return arr;
+        }
+
+
+        function Value() {
+            let value = prompt("Enter Value: ");
+            return value;
+        }
+
+        function checkIndex(arr, index, value) {
+            arr2 = [];
+            for (i = 0; i < index; i++) {
+                arr2[i] = arr[i];
+            }
+            for (let j = index + 1; j <= arr.length; j++) {
+                arr2[j] = arr[j - 1];
+            }
+            arr2[index] = value;
+        }
+        function runArray() {
+            length = letLength();
+            arr = letArray(length);
+            document.write("Array Enter Is: " + arr + "<br>");
+            index = tryAddFromArray();
+            value = Value();
+            result = checkIndex(arr, index, value);
+            document.write("Array Changed: " + arr2);
+        }
+        runArray();
+    </script>
+</body>
+
+</html>

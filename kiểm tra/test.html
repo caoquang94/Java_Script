@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- <canvas id="myCanvas" width="1000" height="530" style="border:1px solid #0c0606;">
+<img id="scream" src="caoquang.jpg" alt="The Scream" width="300" height="300">
+</canvas> -->
+<audio id="myAudio" controls autoplay>
+  <!-- <source src="baby.mp3" type="audio/ogg"> -->
+  <source src="merrychristmas.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<p>Click the button to find out if the audio automatically started to play as soon as it was ready.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<script>
+
+window.onload = function() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("scream");
+  ctx.drawImage(img, 10, 10,300,300);
+};
+
+
+
+
+function myFunction() {
+  var x = document.getElementById("myAudio").autoplay;
+  document.getElementById("demo").innerHTML = x;
+}
+// var canvas = document.getElementById("myCanvas");
+// var context = canvas.getContext("2d");
+// context.rect(0, 0, canvas.width, canvas.height);
+
+// var grd = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+
+// grd.addColorStop(0, "#22f95f");
+// grd.addColorStop(1, "#1b82e2");
+
+// context.fillStyle = grd;
+// context.fill();
+
+</script>
+
+</body>
+</html>

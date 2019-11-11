@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Biểu Diễn Hình Ảnh</title>
+    <style>
+        #myCanvas {
+            border: 3px solid #fe0000;
+            background-color: #11f509fd;
+        }
+    </style>
+</head>
+
+<body>
+    <img style="display:none" width="100" height="100" src="download.jpeg" alt="" id="image" />
+    <canvas id="myCanvas" width="600px" height="500px"></canvas>
+    <script>
+        class Animal {
+            constructor(name, image, x, y, width, height) {
+                this.name = name;
+                this.image = image;
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+            }
+            render(canvas) {
+                canvas.drawImage(this.image, this.x, this.y, this.width, this.height);
+            }
+        }
+        let animalLyon = new Image();
+        animalLyon.src = document.getElementById("image").src;
+        let ctx = document.getElementById("myCanvas");
+        let canvas = ctx.getContext("2d");
+        window.onload = function () {
+            let animal = new Animal("Lyon",animalLyon, 50, 50, 200, 100);
+            animal.render(canvas);
+        };
+        
+    </script>
+</body>
+
+</html>

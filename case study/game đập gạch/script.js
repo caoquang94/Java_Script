@@ -4,12 +4,12 @@ let context = canvas.getContext('2d');
 let ball = {
     x : 547,
     y : 567,
-    dx: 5,
-    dy: 2,
+    dx: 8.5,
+    dy: 4.3,
     radius: 12,
 }
 let paddle = {
-    width: 100,
+    width: 1030,
     height: 10,
     x: 500,
     y: canvas.height - 10,
@@ -63,7 +63,7 @@ document.addEventListener('keydown', function(event){
 function drawBall(){
 context.beginPath();
 context.arc(ball.x,ball.y,ball.radius,0, Math.PI *2);
-context.fillStyle = "red";
+context.fillStyle = "white";
 context.fill();
 context.closePath();
 }
@@ -71,6 +71,7 @@ context.closePath();
 function drawPaddle(){
     context.beginPath();
     context.rect(paddle.x, paddle.y, paddle.width, paddle.height);
+    context.fillStyle = "#ADFF2F"
     context.fill();
     context.closePath();
 }
@@ -86,6 +87,7 @@ function drawBricks(){
         if(!b.isBroken){
             context.beginPath();
             context.rect( b.x, b.y, bricksConfig.width, bricksConfig.height);
+            context.fillStyle = "#ffff00"
             context.fill();
             context.closePath();
         }
@@ -115,6 +117,8 @@ function handleBallCollidBrick(){
                 ball.dy = -ball.dy;
                 b.isBroken = true;
                 userScore += 1;
+                // ball.dx +=1;
+                // ball.dy +=0.5;
                 if(userScore >= maxScore){
                     isGameOver = true;
                     isGameWin = true;
@@ -149,9 +153,9 @@ function checkGameOver(){
 
 function handleGameOver(){
     if(isGameWin){
-        alert("YOU WIN!")
+        alert("YOU WIN!" + '\n' + "YOUR SCORE IS " + userScore)
     }else {
-        alert("YOU LOSE!")
+        alert("YOU LOSE!" + '\n' + "YOUR SCORE IS " + userScore)
     }
 }
 
