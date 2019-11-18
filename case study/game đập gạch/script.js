@@ -3,10 +3,10 @@ let context = canvas.getContext('2d');
     
 
 let ball = {
-    x : 547,
-    y : 567,
-    dx: 8.5,
-    dy: 4.3,
+    x : 549,
+    y : 576,
+    dx: 5.4,
+    dy: 3.2,
     radius: 12,
 }
 let paddle = {
@@ -110,25 +110,65 @@ function handBallCollidPaddle(){
     }
 }
 
+// function handleBallCollidBrick(){
+//     brickList.forEach(function(b){
+//         if(!b.isBroken){
+//             if(ball.x >= b.x && ball.x <= b.x + bricksConfig.width && 
+//                 ball.y + ball.radius >=b.y && ball.y - ball.radius <= b.y + bricksConfig.height){
+//                 ball.dy = -ball.dy;
+//                 b.isBroken = true;
+//                 userScore += 1;
+                
+//                 if(userScore >= maxScore){
+//                     isGameOver = true;
+//                     isGameWin = true;
+//                 }
+//             }
+//         }
+//     })
+//     // updateScore();
+// }
+
 function handleBallCollidBrick(){
     brickList.forEach(function(b){
         if(!b.isBroken){
-            if(ball.x >= b.x && ball.x <= b.x + bricksConfig.width && 
-                ball.y + ball.radius >=b.y && ball.y - ball.radius <= b.y + bricksConfig.height){
+            if(ball.x >= b.x && ball.x <= b.x + bricksConfig.width)
+                {
                 ball.dy = -ball.dy;
                 b.isBroken = true;
                 userScore += 1;
-                // ball.dx +=1;
-                // ball.dy +=0.5;
+                ball.dx +=1;
+                ball.dy+=1}
+                else if(ball.y + ball.radius >=b.y && ball.y - ball.radius <= b.y + bricksConfig.height){
+                ball.dy = -ball.dy;
+                b.isBroken = true;
+                userScore += 1;
+                    ball.dx +=1;
+                    ball.dy -=1;
+                }
                 if(userScore >= maxScore){
                     isGameOver = true;
                     isGameWin = true;
                 }
             }
         }
-    })
+    )
+    // updateScore();
 }
 
+
+// function updateScore(){
+//     if(userScore >= 1){
+//     if(ball.dy > 0){
+//         ball.dx +=1;
+//         ball.dy +=1;
+//     }else {
+//         ball.dx +=1;
+//         ball.dy -=1;  
+        
+//     }
+//     }
+// };
 function updateBallPosition(){
     ball.x += ball.dx;
     ball.y += ball.dy;
@@ -172,6 +212,7 @@ function draw(){
     handleBallCollidBound();
     handBallCollidPaddle();
     handleBallCollidBrick();
+    // updateScore();
     requestAnimationFrame(draw);
 }else {
     handleGameOver();
